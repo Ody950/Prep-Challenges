@@ -63,18 +63,17 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    const words = str.split(' ');
-  const replaceW = words.map((word) => {
-    if (word === 'I') {
-      return 'We';
-    } else if (word === 'am') {
-      return 'are';
-    } else if (word === 'was') {
-      return 'were';
+  let newWord= str.split(" ");
+  for (let i = 0; i < newWord.length; i++) {
+    if (newWord[i] === "I") {
+      newWord.splice(i, 1, "We");
+    } else if (newWord[i] === "am") {
+      newWord.splice(i, 1, "are");
+    } else if (newWord[i] === "was") {
+      newWord.splice(i, 1, "were");
     }
-    return word;
-  });
-  return replaceW.join(' ');
+  }
+  return newWord.join(" ");
 }
 // -------------------------------------------------------------------------------------------------------
 
