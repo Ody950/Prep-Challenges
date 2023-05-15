@@ -14,39 +14,14 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
+
 const recursionPattern = (int1, int2) => {
-    let arr =[];
-    for(let i = int1; i >= -(int1); i -= int2){
-      
-      if (i >= 0){
-        arr.push(i) 
-      }else{
-        arr.push(i) 
-        console.log(i)
-      
-        break;
-      }
-    }
-  let last = arr.slice(-1)[0];
-    console.log(last)
-  for(let i = last + int2; i <= int1; i += int2){
+  if (int1 <= 0) {
+      return [int1];
+  }
 
-        arr.push(i) 
-    }
-
-  
-    return(arr)
-   
+  return [int1].concat(recursionPattern(int1 - int2, int2), [int1]);
 }
-
-//by recursion
-// const recursionPattern = (int1, int2) => {
-//   if (int1 <= 0) {
-//       return [int1];
-//   }
-
-//   return [int1].concat(recursionPattern(int1 - int2, int2), [int1]);
-// }
 
 // -------------------------------------------------------------------------------------------------------
 
