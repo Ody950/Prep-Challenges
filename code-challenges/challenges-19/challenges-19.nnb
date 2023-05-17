@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "unction appendAndDelete(s, t, k) {\n  let same = 0;\n  \n  for (let i =0; i<s.length; i++){\n      if(s[i] === t[i]){\n          same ++;\n      }else{\n          break\n      }\n  }\n  \n  let reS = s.length - same\n   let reT = t.length - same\n   \n   if(k >= reS + reT && (k - reS - reT) %2 == 0 || k>= t.length+s.length){\n       return(\"Yes\");\n   }else{\n       return(\"No\");\n   }\n   \n\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function encryption(s) {\n  let root = Math.sqrt(s.length);\n  let row = Math.floor(root);\n  let columns = Math.ceil(root);\n  let arr = s.match(new RegExp(`.{1,${columns}}`, \"g\"));\n  let arrx = [];\n  for (let i=0; i<columns; i++){\n    const letters = arr.map(str => str.charAt(i)).join(\"\");\n    arrx.push(letters); \n  }\n  return(arrx.join(\" \"));\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
